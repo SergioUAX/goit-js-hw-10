@@ -30,7 +30,7 @@ const options = {
                 position: 'topRight',
                 backgroundColor: '#ef4040',
                 messageColor: '#fff',
-                iconUrl: '../img/iziToastIcon.svg',
+                iconUrl: '../img/errorIcon.svg',
                 iconColor: '#fff',                  
             });
             buttonDataStart.disabled = true;
