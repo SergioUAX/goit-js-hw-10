@@ -4,6 +4,8 @@ import "flatpickr/dist/flatpickr.min.css";
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
+import errorIcon from "../img/errorIcon.svg";
+
 const datePicker = document.querySelector("#datetime-picker");
 datePicker.classList.add("datetime-picker");
 
@@ -30,8 +32,9 @@ const options = {
                 position: 'topRight',
                 backgroundColor: '#ef4040',
                 messageColor: '#fff',
-                iconUrl: '../img/errorIcon.svg',
-                iconColor: '#fff',                  
+                iconUrl: errorIcon,
+                iconColor: '#fff', 
+                theme: 'dark',
             });
             buttonDataStart.disabled = true;
         }        

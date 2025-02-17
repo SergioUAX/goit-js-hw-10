@@ -1,6 +1,10 @@
 import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
+import cautionIcon from "../img/cautionIcon.svg";
+import okIcon from "../img/okIcon.svg";
+import errorIcon from "../img/errorIcon.svg";
+
 const form = document.querySelector('.form');
 form.querySelector('label').classList.add('input-delay-label');
 
@@ -39,14 +43,15 @@ function handleSubmit(event) {
             position: 'topRight',
             backgroundColor: '#ffa000',
             messageColor: '#fff',
-            iconUrl: '../img/cautionIcon.svg',
-            iconColor: '#fff',                  
+            iconUrl: cautionIcon,
+            iconColor: '#fff', 
+            theme: 'dark',
         });
         return;
     }
 
     const shouldResolve = userSelectedRadio.value === "fulfilled";
-    
+
     createPromise({delay: userDelay, shouldResolve})
         .then(() => {
             showToaster({
@@ -56,8 +61,9 @@ function handleSubmit(event) {
                 position: 'topRight',
                 backgroundColor: '#59a10d',
                 messageColor: '#fff',
-                iconUrl: '../img/okIcon.svg',
-                iconColor: '#fff',                  
+                iconUrl: okIcon,
+                iconColor: '#fff',
+                theme: 'dark',
             });            
         })
         .catch(() => {
@@ -68,8 +74,9 @@ function handleSubmit(event) {
                 position: 'topRight',
                 backgroundColor: '#ef4040',
                 messageColor: '#fff',
-                iconUrl: '../img/errorIcon.svg',
-                iconColor: '#fff',                  
+                iconUrl: errorIcon,
+                iconColor: '#fff', 
+                theme: 'dark',
             });            
         });
     form.reset();
