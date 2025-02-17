@@ -21,7 +21,7 @@
     border: 1px solid #000;    
 }
 
-.datetime-picker:active {
+.datetime-picker:focus {
     border: 1px solid #4e75ff;
     color: #000;
 }

@@ -32,7 +32,7 @@
     border: 1px solid #000;
 }
 
-.input-delay:active {
+.input-delay:focus {
     border: 1px solid #4e75ff;
 }
 
@@ -46,6 +46,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 12px 48px 8px;    
+}
+
+.input-fieldset:hover {
+    border: 1px solid #000;
 }
 
 .input-fieldset-radio {        
